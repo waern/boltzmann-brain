@@ -43,7 +43,7 @@ library
                      , bytestring >= 0.10.8.2
                      , containers >= 0.5.6
                      , haskell-src-exts >= 1.21
-                     , megaparsec >= 7
+                     , megaparsec >= 9
                      , mtl >= 2.2.1
                      , multiset >= 0.3.4.1
                      , hmatrix >= 0.18.0.0

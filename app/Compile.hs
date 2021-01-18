@@ -187,7 +187,7 @@ main = do
 
 -- | Prints parsing errors or returns the parsed system.
 getSystem
-  :: (Stream t, ShowErrorComponent e) => Either (ParseErrorBundle t e) a -> IO a
+  :: (VisualStream t, TraversableStream t, ShowErrorComponent e) => Either (ParseErrorBundle t e) a -> IO a
 
 getSystem (Left  err) = printError err
 getSystem (Right sys) = return sys
