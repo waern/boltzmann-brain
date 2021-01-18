@@ -192,7 +192,7 @@ generatorType :: Type () -> Type ()
 generatorType type' = TyForall
   ()
   Nothing
-  (Just $ CxTuple () [ClassA () randomGen' [g']])
+  (Just $ CxTuple () [undefined () randomGen' [g']])
   (TyFun () int' (maybeTType $ TyTuple () Boxed [type', int']))
 
 guardian :: String -> Stmt ()
@@ -302,7 +302,7 @@ listGeneratorType :: Type () -> Type ()
 listGeneratorType type' = TyForall
   ()
   Nothing
-  (Just $ CxTuple () [ClassA () randomGen' [g']])
+  (Just $ CxTuple () [undefined () randomGen' [g']])
   (TyFun () int' (maybeTType $ TyTuple () Boxed [TyList () type', int']))
 
 declareListGenerators :: PSystem Double -> Bool -> [Decl ()]
@@ -347,7 +347,7 @@ genericSamplerType :: Type ()
 genericSamplerType = TyForall
   ()
   Nothing
-  (Just $ CxTuple () [ClassA () randomGen' [g']])
+  (Just $ CxTuple () [undefined () randomGen' [g']])
   (TyFun
     ()
     (TyFun ()
